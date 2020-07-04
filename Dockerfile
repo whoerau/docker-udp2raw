@@ -2,7 +2,7 @@ FROM debian:latest
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y vim wget \
+    apt-get install -y vim wget libstdc++ iptables\
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
