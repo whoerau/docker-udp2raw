@@ -29,4 +29,4 @@ CMD exec udp2raw_amd64 \
     -k $PASSWORD \
     -a \
     --raw-mode $RAW_MODE \
-    --fix-fro 
+    --fix-gro 
