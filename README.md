@@ -8,3 +8,9 @@ PASSWORD=ChangeMe!!!
 RAW_MODE=faketcp
 ARGS=-s #-c
 ```
+## description
+### container config
+- net=host
+- cap-add=NET_ADMIN
+- eg:
+  >docker run --net=host --cap-add=NET_ADMIN ···
