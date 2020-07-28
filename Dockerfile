@@ -6,11 +6,11 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-ARG UDP2RAW_VERSION=20200727.0
-RUN UDP2RAW_VERSION=`wget -qO- -t1 -T2 "https://api.github.com/repos/lhc70000/iina/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g' `
+#ARG UDP2RAW_VERSION=20200715.0
+#RUN UDP2RAW_VERSION=`wget -qO- -t1 -T2 --no-check-certificate "https://api.github.com/repos/wangyu-/udp2raw-tunnel/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g' `
 
 WORKDIR /app
-RUN wget https://github.com/wangyu-/udp2raw-tunnel/releases/download/$UDP2RAW_VERSION/udp2raw_binaries.tar.gz \
+RUN wget https://github.com/wangyu-/udp2raw-tunnel/releases/latest/download/udp2raw_binaries.tar.gz \
   && tar -xzvf udp2raw_binaries.tar.gz
 
 
