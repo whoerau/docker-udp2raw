@@ -28,13 +28,12 @@ ENV LOCAL_ADDR 0.0.0.0:4097
 ENV REMOTE_ADDR 127.0.0.1:4096
 ENV PASSWORD ChangeMe!!!
 ENV RAW_MODE faketcp
-ENV ARGS -s #-c
+ENV ARGS -a -s #-c
 
 CMD exec udp2raw_amd64 \
     $ARGS \
     -l $LOCAL_ADDR \
     -r $REMOTE_ADDR \
     -k $PASSWORD \
-    -a \
     --raw-mode $RAW_MODE \
     --fix-gro
