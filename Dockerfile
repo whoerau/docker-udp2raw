@@ -10,7 +10,7 @@ RUN apt-get update \
 #RUN UDP2RAW_VERSION=`wget -qO- -t1 -T2 --no-check-certificate "https://api.github.com/repos/wangyu-/udp2raw-tunnel/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g' `
 
 WORKDIR /app
-RUN wget https://github.com/wangyu-/udp2raw-tunnel/releases/latest/download/udp2raw_binaries.tar.gz \
+RUN wget https://github.com/wangyu-/udp2raw/releases/latest/download/udp2raw_binaries.tar.gz \
   && tar -xzvf udp2raw_binaries.tar.gz
 
 
