@@ -36,7 +36,7 @@ jobs:
         name: Get Latest Tag Of Upstream Source Code
         id: download
         run: |
-          VERSION=$(curl --silent "https://api.github.com/repos/wangyu-/udp2raw-tunnel/releases" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+          VERSION=$(curl --silent "https://api.github.com/repos/wangyu-/udp2raw/releases" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
           echo ::set-output name=latest_tag::${VERSION}
       -
         name: Login to DockerHub
